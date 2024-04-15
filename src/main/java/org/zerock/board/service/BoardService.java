@@ -16,6 +16,8 @@ public interface BoardService {
 
     void removeWithReplies(Long bno);   // 삭제 기능
 
+
+
     default Board dtoToEntity(BoardDTO dto){
 
         Member member = Member.builder()
@@ -47,5 +49,7 @@ public interface BoardService {
         return boardDTO;
 
     }
+
+    void modify(BoardDTO boardDTO);
 
 }
